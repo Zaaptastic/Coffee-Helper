@@ -1,5 +1,4 @@
 var http = require('http');
-var dt = require('./date');
 var fs = require('fs');
 var url = require('url');
 var events = require('events');
@@ -34,14 +33,12 @@ app.listen(process.env.PORT || 5000);
 // Root Route
 app.get('/', function (req, res) {
 	var time = 1;
-	function specialalert() {
-		console.log("here");
-	}
 
     res.render('pages/index', {
     	time: time
     });
 
-    time++;
-});
 
+    // Set the date we're counting down to
+
+});
