@@ -1,10 +1,12 @@
-console.log("This is coming from js/script.js");
-
-var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+console.log("Loaded JavaScript Utilities");
 
 var seconds = 0;
-// Update the count down every 1 second
-var x = setInterval(function() {
+var timer;
+
+
+function start(element, clr) {
+	// Update the count down every 1 second
+	timer = setInterval(function() {
 
 	seconds++;
 
@@ -27,4 +29,14 @@ var x = setInterval(function() {
     document.getElementById("main-timer").innerHTML = "EXPIRED";
   }
 }, 1000);
+}
 
+function pause(element, clr) {
+	clearInterval(timer);
+}
+
+function reset(element, clr) {
+	seconds = 0;
+	displaySeconds = 0;
+	displayMinutes = 0;
+}

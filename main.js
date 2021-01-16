@@ -8,37 +8,31 @@ const ejs = require('ejs');
 var app = express();
 var eventEmitter = new events.EventEmitter();
 
-//http.createServer(function (req, res) {
-//   // fs.readFile('mainpage.html', function(err, data) {
-
-//   //   res.writeHead(200, {'Content-Type': 'text/html'});
-//   //   res.write(data);
-
-//   //   res.write("test");
-//   //   return res.end();
-//   // });
-
-//   // res.write("The date and time are currently: " + dt.myDateTime());
-//   // res.write("\n");
-//   // res.write(req.url);
-
-//   res.render('mainpage.html')
-
-// }).listen(process.env.PORT || 5000);
 app.use(express.static('public'));
+app.use(express.urlencoded({
+  extended: true
+}))
 app.set('view engine', 'ejs');
 
 app.listen(process.env.PORT || 5000);
 
 // Root Route
 app.get('/', function (req, res) {
-	var time = 1;
 
-    res.render('pages/index', {
-    	time: time
+    res.render('pages/init', {
+
     });
 
+});
 
-    // Set the date we're counting down to
-
+app.post('/timer', function (req, res) {
+	var totalWeight = req.body.weight;
+	var stepWeight = Math.floor(totalWeight / 5);
+	res.render('pages/timer', {
+		step1: stepWeight,
+		step2: stepWeight * 2,
+		step3: stepWeight * 3,
+		step4: stepWeight * 4,
+		step5: totalWeight
+	});
 });

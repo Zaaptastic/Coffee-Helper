@@ -1,0 +1,38 @@
+<html>
+<head>
+      <!--other script and also external css included over here-->
+</head>
+<body>
+<h1 id="title-header">Coffee Helper</h1>
+
+<p>This tool is currently under development. It will assume you are using 40g grounds with a standard 3:5 method.</p>
+
+<h2> Weight Distributions </h2>
+<p>
+	Step 1: <%= step1 %>
+</p>
+<p>
+	Step 2: <%= step2 %>
+</p>
+<p>
+	Step 3: <%= step3 %>
+</p>
+<p>
+	Step 4: <%= step4 %>
+</p>
+<p>
+	Step 5: <%= step5 %>
+</p>
+
+<!-- Display the countdown timer in an element -->
+<p id="main-timer">00 : 00</p>
+
+<script src="/javascript/utilities.js"></script>
+
+<button type="button" onclick="start()">Start</button>
+<button type="button" onclick="pause()">Pause</button>
+<button type="button" onclick="reset()">Reset</button>
+<button type="button" onclick="location.href='/'">Back</button>
+
+</body>
+</html>
