@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/timer', function (req, res) {
-	var totalWeight = req.body.weight;
+	var totalWeight = req.body.weight * 16;
 	var stepWeight = Math.floor(totalWeight / 5);
 	res.render('pages/timer', {
 		step1: stepWeight,
