@@ -34,8 +34,14 @@ app.listen(process.env.PORT || 5000);
 // Root Route
 app.get('/', function (req, res) {
 	var time = 1;
+	function specialalert() {
+		console.log("here");
+	}
 
     res.render('pages/index', {
     	time: time
     });
+
+    time++;
 });
+
