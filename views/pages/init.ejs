@@ -7,9 +7,11 @@
 
 <p>This tool is currently under development. It will assume you are using 40g grounds with a standard 3:5 method.</p>
 
+<p>Currently using version 1.01</p>
+
 <form action="timer" method="post">
-	<label for="weight">Enter Weight (grams): </label>
-	<input id="weight" name="weight" type="number" />
+	<label for="weight" inputmode="numeric">Enter Weight (grams): </label>
+	<input name="weight" type="number" pattern="[0-9]*" />
 	<input type="submit" value="OK">
 </form>
 

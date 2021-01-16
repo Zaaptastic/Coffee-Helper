@@ -28,7 +28,7 @@ function pause(element, clr) {
 
 function reset(element, clr) {
 	seconds = 0;
-	  	updateTimerView(0, 0);
+	updateTimerView(0, 0);
 }
 
 function updateTimerView(minutes, seconds){
