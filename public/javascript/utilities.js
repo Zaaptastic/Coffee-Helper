@@ -7,28 +7,19 @@ var timer;
 function start(element, clr) {
 	// Update the count down every 1 second
 	timer = setInterval(function() {
+		seconds++;
 
-	seconds++;
+		displayMinutes = Math.floor(seconds / 60);
+		displaySeconds = seconds % 60;
 
-	displayMinutes = Math.floor(seconds / 60);
-	displaySeconds = seconds % 60;
+	  	updateTimerView(displayMinutes, displaySeconds);
 
-	if (displaySeconds < 10) {
-		displaySeconds = "0" + displaySeconds;
-	}
-	if (displayMinutes < 10) {
-		displayMinutes = "0" + displayMinutes;
-	}
-
-  // Display the result in the element with id="demo"
-  document.getElementById("main-timer").innerHTML = displayMinutes + " : " + displaySeconds;
-
-  // If the count down is finished, write some text
-  if (displayMinutes >= 1) {
-    clearInterval(x);
-    document.getElementById("main-timer").innerHTML = "EXPIRED";
-  }
-}, 1000);
+		// If the count down is finished, write some text
+		if (displayMinutes >= 1) {
+			clearInterval(x);
+			document.getElementById("main-timer").innerHTML = "EXPIRED";
+		}
+	}, 1000);
 }
 
 function pause(element, clr) {
@@ -37,6 +28,16 @@ function pause(element, clr) {
 
 function reset(element, clr) {
 	seconds = 0;
-	displaySeconds = 0;
-	displayMinutes = 0;
+	  	updateTimerView(0, 0);
+}
+
+function updateTimerView(minutes, seconds){
+	if (seconds < 10) {
+		seconds = "0" + seconds;
+	}
+	if (minutes < 10) {
+		minutes = "0" + minutes;
+	}
+	
+	document.getElementById("main-timer").innerHTML = minutes + " : " + seconds;
 }
