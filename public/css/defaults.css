@@ -15,7 +15,7 @@ body, html {
   }
 
   #description, input, #buttons-plane button {
-    font-size: 30px;
+    font-size: 50px;
   }
 
   #parameters {
@@ -34,7 +34,7 @@ body, html {
   }
 
   #description, input, #buttons-plane button {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   #parameters {
@@ -55,7 +55,7 @@ body, html {
 #description {
   padding-left: 15%;
   padding-right: 15%;
-  height: 20%;
+  height: 30%;
   padding-top: 5%;
 }
 
