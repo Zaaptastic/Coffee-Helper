@@ -1,40 +1,43 @@
 <html>
 <head>
-      <!--other script and also external css included over here-->
+	<link rel="stylesheet" href="css/defaults.css">
 </head>
 <body>
-<h1 id="title-header">Coffee Helper</h1>
+	<h1 id="title-header">Coffee Helper</h1>
 
-<p>This tool is currently under development. It will assume you are using 40g grounds with a standard 3:5 method.</p>
+	<div id="description">
+		<h2> Weight Distributions </h2>
+		<p>
+			Step 1: <%= step1 %>g
+		</p>
+		<p>
+			Step 2: <%= step2 %>g
+		</p>
+		<p>
+			Step 3: <%= step3 %>g
+		</p>
+		<p>
+			Step 4: <%= step4 %>g
+		</p>
+		<p>
+			Step 5: <%= step5 %>g
+		</p>
+	</div>
 
-<h2> Weight Distributions </h2>
-<p>
-	Step 1: <%= step1 %>
-</p>
-<p>
-	Step 2: <%= step2 %>
-</p>
-<p>
-	Step 3: <%= step3 %>
-</p>
-<p>
-	Step 4: <%= step4 %>
-</p>
-<p>
-	Step 5: <%= step5 %>
-</p>
+	<div id="parameters">
+		<!-- Display the countdown timer in an element -->
+		<div id="main-timer">00 : 00</div>
 
-<!-- Display the countdown timer in an element -->
-<p id="main-timer">00 : 00</p>
+		<script src="/javascript/utilities.js"></script>
 
-<script src="/javascript/utilities.js"></script>
-
-<div id="buttons-plane">
-<button type="button" onclick="start()">Start</button>
-<button type="button" onclick="pause()">Pause</button>
-<button type="button" onclick="reset()">Reset</button>
-<button type="button" onclick="location.href='/'">Back</button>
-</div>
+		<div id="buttons-plane">
+			<button type="button" onclick="start()">Start</button>
+			<button type="button" onclick="reset()">Reset</button>
+			<br />
+			<button type="button" onclick="pause()">Pause</button>
+			<button type="button" onclick="location.href='/'">Back</button>
+		</div>
+	</div>
 
 </body>
 </html>
