@@ -5,6 +5,12 @@ var timer;
 
 
 function start(element, clr) {
+	// Make the first second quicker so it doesn't feel as bad to click the button
+	seconds++;
+	displayMinutes = Math.floor(seconds / 60);
+	displaySeconds = seconds % 60;
+  	updateTimerView(displayMinutes, displaySeconds);
+
 	// Update the count down every 1 second
 	timer = setInterval(function() {
 		seconds++;
