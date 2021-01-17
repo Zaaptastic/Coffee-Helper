@@ -3,25 +3,31 @@
 	<link rel="stylesheet" href="css/defaults.css">
 </head>
 <body>
-	<h1 id="title-header">Coffee Helper</h1>
+	<div id="title-header">Coffee Helper</div>
 
-	<div id="description">
+	<div id="description" class="row">
 		<h2> Weight Distributions </h2>
-		<p>
-			Step 1: <%= step1 %>g
-		</p>
-		<p>
-			Step 2: <%= step2 %>g
-		</p>
-		<p>
-			Step 3: <%= step3 %>g
-		</p>
-		<p>
-			Step 4: <%= step4 %>g
-		</p>
-		<p>
-			Step 5: <%= step5 %>g
-		</p>
+
+		<div class="column">
+			<p>
+				Step 1: <%= step1 %>g
+			</p>
+			<p>
+				Step 2: <%= step2 %>g
+			</p>
+		</div>
+		<div class="column">
+			<p>
+				Step 3: <%= step3 %>g
+			</p>
+			<p>
+				Step 4: <%= step4 %>g
+			</p>
+			<p>
+				Step 5: <%= step5 %>g
+			</p>
+		</div>
+
 	</div>
 
 	<div id="parameters">
