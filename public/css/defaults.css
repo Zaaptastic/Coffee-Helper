@@ -20,12 +20,16 @@ body {
     font-size: 80px;
   }
 
-  #description, input,  button {
+  input {
+    font-size: 40px;
+  }
+
+  #description, .clickable-button {
     font-size: 90px;
   }
 
   #parameters {
-    font-size: 40px;
+    font-size: 80px;
   }
 
   #main-timer {
@@ -39,12 +43,16 @@ body {
     font-size: 50px;
   }
 
-  #description, input, button {
+  input {
+    font-size: 30px;
+  }
+
+  #description, .clickable-button {
     font-size: 80px;
   }
 
   #parameters {
-    font-size: 30px;
+    font-size: 70px;
   }
 
   #main-timer {
@@ -77,7 +85,7 @@ body {
 
 input, button {
   width: 75%;
-  height: 10%;
+  height: 15%;
   margin: 2%;
 }
 
@@ -87,12 +95,6 @@ input, button {
 
 .main-timer-clicked {
   box-shadow:inset -3px -3px 0px 6px #e1e1e1;
-}
-
-#buttons-plane button {
-  width: 30%;
-  height: 10%;
-  margin: 10px;
 }
 
 .column {
