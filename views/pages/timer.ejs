@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<link rel="stylesheet" href="css/defaults.css">
 </head>
@@ -8,18 +9,11 @@
 		<div id="title-header">Coffee Helper</div>
 
 		<div id="parameters">
-			<!-- Display the countdown timer in an element -->
-			<div id="main-timer">00 : 00</div>
+			<div id="main-timer" onclick="startOrPause()">00 : 00</div>
 
 			<script src="/javascript/utilities.js"></script>
 
-			<div id="buttons-plane">
-				<button type="button" onclick="start()">Start</button>
-				<button type="button" onclick="reset()">Reset</button>
-				<br />
-				<button type="button" onclick="pause()">Pause</button>
-				<button type="button" onclick="location.href='/'">Back</button>
-			</div>
+			<button type="button" id="main-button" onclick="reset()">Reset</button>
 		</div>
 
 	</div>

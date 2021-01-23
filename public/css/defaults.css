@@ -17,7 +17,7 @@ div {
     font-size: 80px;
   }
 
-  #description, input, #buttons-plane button {
+  #description, input,  button {
     font-size: 50px;
   }
 
@@ -36,7 +36,7 @@ div {
     font-size: 50px;
   }
 
-  #description, input, #buttons-plane button {
+  #description, input, button {
     font-size: 40px;
   }
 
@@ -71,14 +71,18 @@ div {
   text-align: center;
 }
 
-input {
-  width: 50%;
+input, button {
+  width: 75%;
   height: 10%;
   margin: 2%;
 }
 
 #main-timer {
+  margin-bottom: 10%;
+}
 
+.main-timer-clicked {
+  box-shadow:inset -3px -3px 0px 6px #e1e1e1;
 }
 
 #buttons-plane button {
@@ -96,4 +100,9 @@ input {
   content: "";
   display: table;
   clear: both;
+}
+
+#main-button {
+  height: 15%;
+  margin: 2%;
 }

@@ -5,10 +5,10 @@ var timer;
 
 var isTimerRunning = false;
 
-
-function start(element, clr) {
+function startOrPause() {
 	if (!isTimerRunning) {
 		isTimerRunning = true;
+		document.getElementById("main-timer").setAttribute("class", "main-timer-clicked");
 
 		// Make the first second quicker so it doesn't feel as bad to click the button
 		seconds++;
@@ -27,21 +27,22 @@ function start(element, clr) {
 
 			// If the count down is finished, write some text
 			if (displayMinutes >= 1) {
-				clearInterval(x);
+				clearInterval(timer);
 				document.getElementById("main-timer").innerHTML = "EXPIRED";
 			}
 		}, 1000);
 	} else {
-		pause(element, clr);
+		document.getElementById("main-timer").removeAttribute("class", "main-timer-clicked");
+		pause();
 	}
 }
 
-function pause(element, clr) {
+function pause() {
 	isTimerRunning = false;
 	clearInterval(timer);
 }
 
-function reset(element, clr) {
+function reset() {
 	seconds = 0;
 	updateTimerView(0, 0);
 }
