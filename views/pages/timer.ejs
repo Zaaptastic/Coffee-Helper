@@ -3,7 +3,26 @@
 	<link rel="stylesheet" href="css/defaults.css">
 </head>
 <body>
-	<div id="title-header">Coffee Helper</div>
+	<div id ="sticky-topper">
+		
+		<div id="title-header">Coffee Helper</div>
+
+		<div id="parameters">
+			<!-- Display the countdown timer in an element -->
+			<div id="main-timer">00 : 00</div>
+
+			<script src="/javascript/utilities.js"></script>
+
+			<div id="buttons-plane">
+				<button type="button" onclick="start()">Start</button>
+				<button type="button" onclick="reset()">Reset</button>
+				<br />
+				<button type="button" onclick="pause()">Pause</button>
+				<button type="button" onclick="location.href='/'">Back</button>
+			</div>
+		</div>
+
+	</div>
 
 	<div id="description" class="row">
 
@@ -29,20 +48,6 @@
 
 	</div>
 
-	<div id="parameters">
-		<!-- Display the countdown timer in an element -->
-		<div id="main-timer">00 : 00</div>
-
-		<script src="/javascript/utilities.js"></script>
-
-		<div id="buttons-plane">
-			<button type="button" onclick="start()">Start</button>
-			<button type="button" onclick="reset()">Reset</button>
-			<br />
-			<button type="button" onclick="pause()">Pause</button>
-			<button type="button" onclick="location.href='/'">Back</button>
-		</div>
-	</div>
 
 </body>
 </html>

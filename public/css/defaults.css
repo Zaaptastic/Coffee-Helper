@@ -3,8 +3,12 @@ body, html {
   height: 100vh;
   color: #e1e1e1;
   background-color: #222222;
-  position: relative;
   overflow: hidden;
+  margin: 5%;
+}
+
+div {
+  width: 100%;
 }
 
 /* Desktops */
@@ -48,23 +52,23 @@ body, html {
 #title-header {
   text-align: center;
   padding-top: 5%;
-  height: 5%;
-}
-
-#description {
-  padding-left: 15%;
-  padding-right: 15%;
-  height: 30%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  height: 10%;
 }
 
 #parameters {
-  height: 50%;
-  width: 100%;
+  padding-top: 20%;
   text-align: center;
+}
+
+#description {
+  height: 50%;
   bottom: 0;
-  position: fixed;
+}
+
+#sticky-topper {
+  top: 0;
+  height: 50%;
+  text-align: center;
 }
 
 input {
