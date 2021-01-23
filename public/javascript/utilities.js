@@ -26,7 +26,7 @@ function startOrPause() {
 		  	updateTimerView(displayMinutes, displaySeconds);
 
 			// If the count down is finished, write some text
-			if (displayMinutes >= 1) {
+			if (displayMinutes >= 60) {
 				clearInterval(timer);
 				document.getElementById("main-timer").innerHTML = "EXPIRED";
 			}
